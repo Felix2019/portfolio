@@ -1,12 +1,6 @@
 <template>
-  <div
-    v-if="!isLoaded"
-    class="w-32 h-32 rounded-full bg-gray-200 animate-pulse"
-  />
+  <div v-if="!isLoaded" class="w-32 h-32 rounded-full bg-gray-200 animate-pulse" />
 
-  <!-- 
-        :src="props.imageUrl"
-    -->
   <img
     src="https://picsum.photos/200"
     alt="profile-image"

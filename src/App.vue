@@ -1,18 +1,17 @@
 <template>
   <AppBar />
-
-  <div class="h-screen p-10 flex flex-col items-center justify-evenly bg-slate-100">
+  <div class="h-screen p-10 flex flex-col items-center justify-around bg-slate-100">
     <ProfileImage />
     <ProfileInfo />
+    <Link_tree />
   </div>
 </template>
 
 <script setup>
-import AppBar from "./components/app-bar.vue"
+import AppBar from "./components/app-bar.vue";
 import ProfileImage from "./components/profile-image.vue";
 import ProfileInfo from "./components/profile-info.vue";
-
-import HelloWorld from "./components/HelloWorld.vue";
+import Link_tree from "./components/link-tree.vue";
 </script>
 
 <style>

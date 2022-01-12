@@ -1,20 +1,23 @@
-k<template>
-  <div class="container">
-    <v-btn
+k
+<template>
+  <div class="w-full flex flex-row justify-around">
+    <button
+      @click="openLink(item.link)"
       v-for="item in links"
       :key="item.key"
-      icon
-      large
-      color="black"
-      @click="openLink(item.link)"
+      class="p-3 bg-slate-200 rounded-full shadow-sm md:hover:bg-slate-300"
     >
-      <v-icon large>{{ item.icon }}</v-icon>
-    </v-btn>
+      <Icon :icon="item.icon" width="26" height="26" />
+    </button>
   </div>
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
 export default {
+  components: {
+    Icon,
+  },
   data: () => {
     return {
       links: [
@@ -44,12 +47,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-</style>
