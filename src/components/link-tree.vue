@@ -1,4 +1,3 @@
-k
 <template>
   <div class="w-full flex flex-row justify-around">
     <button
@@ -30,13 +29,13 @@ export default {
           icon: "mdi-instagram",
         },
         {
-          link: "https://www.linkedin.com/in/felix-g-706b4b208/",
+          link: "https://www.linkedin.com/in/felix-günthner-706b4b208/",
           icon: "mdi-linkedin",
         },
-        {
-          link: "https://turtlelab.web.app",
-          icon: "mdi-web",
-        },
+        // {
+        //   link: "https://turtlelab.web.app",
+        //   icon: "mdi-web",
+        // },
       ],
     };
   },

@@ -15,8 +15,8 @@ export default {
       if (navigator.share)
         navigator
           .share({
-            title: "https://felixguenthner.com",
-            text: "Ein Schmuckstück für Dich.",
+            title: "Felix Günthner - Full Stack Developer.",
+            url: "https://felixguenthner.com",
           })
           .catch((error) => console.log(error));
     };
