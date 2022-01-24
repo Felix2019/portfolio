@@ -1,5 +1,5 @@
 <template>
-  <button @click="share">
+  <button @click="share" name="share-button" aria-label="share-button">
     <Icon icon="mdi:share-variant-outline" width="26" height="26" />
   </button>
 </template>

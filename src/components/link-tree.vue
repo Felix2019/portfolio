@@ -2,6 +2,8 @@
   <div class="w-full flex flex-row justify-around">
     <button
       @click="openLink(item.link)"
+      name="link-button"
+      aria-label="link-button"
       v-for="item in links"
       :key="item.key"
       class="p-3 bg-slate-200 rounded-full shadow-sm md:hover:bg-slate-300"
