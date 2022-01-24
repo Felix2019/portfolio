@@ -2,7 +2,7 @@
   <div class="h-screen flex flex-col items-center bg-slate-100">
     <AppBar />
 
-    <div class="h-full flex flex-col items-center justify-around m-5">
+    <div class="h-full flex flex-col items-center justify-evenly m-5">
       <ProfileImage />
       <ProfileInfo />
       <LinkTree />
