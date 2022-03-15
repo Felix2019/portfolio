@@ -8,19 +8,13 @@
       <LinkTree />
     </section>
 
-    <section ref="projects" class="py-20 bg-slate-400">
+    <section ref="projects" class="py-20 px-8 bg-slate-400">
       <Projects />
     </section>
 
-    <section ref="about" class="h-screen py-20 bg-slate-700"></section>
-
-    <!-- filter button -->
-    <!-- <button
-      @click="openFilter"
-      class="fixed z-10 bottom-3 right-3 bg-emerald-500 rounded-2xl p-3.5 shadow transition ease-in-out hover:bg-emerald-700"
-    >
-      <Icon icon="mdi:filter-outline" width="26" height="26" color="white" />
-    </button> -->
+    <section ref="about" class="h-screen py-20">
+      <ContactForm />
+    </section>
   </div>
 </template>
 
@@ -31,6 +25,7 @@ import LinkTree from "../components/link-tree.vue";
 import { ref, provide } from "vue";
 import AppBar from "../components/app-bar.vue";
 import Projects from "../components/projects.vue";
+import ContactForm from "../components/contact-form.vue";
 
 const projects = ref();
 const about = ref();
