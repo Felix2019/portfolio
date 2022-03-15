@@ -6,7 +6,7 @@
       aria-label="link-button"
       v-for="item in links"
       :key="item.key"
-      class="p-3 bg-slate-200 rounded-full shadow-sm md:hover:bg-slate-300"
+      class="p-3 bg-slate-100 rounded-full shadow-sm md:hover:bg-slate-300"
     >
       <Icon :icon="item.icon" width="26" height="26" />
     </button>

@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-6">
-    <h1 class="text-2xl font-bold text-white">Projects</h1>
+    <h1 class="text-2xl font-bold">Projects</h1>
 
     <!-- grid container -->
     <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
@@ -11,9 +11,10 @@
         }"
         v-for="(item, index) in data"
         :key="index"
-        class="p-10 bg-white text-center shadow rounded flex items-center justify-center hover:scale-105 transition ease-in-out"
+        :style="{ backgroundImage: `url(${item.thumbnail})` }"
+        class="h-60 px-5 py-4 bg-cover bg-center shadow rounded flex items-end justify-start hover:scale-105 transition ease-in-out"
       >
-        <p>{{ item.title }}</p>
+        <p class="text-white font-bold ">{{ item.title }}</p>
 
         <!-- <img
             class="w-40 h-40 object-cover rounded-sm shadow md:w-60 md:h-60 lg:w-72 lg:h-72"

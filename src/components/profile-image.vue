@@ -6,7 +6,7 @@
 
   <img
     src="https://ik.imagekit.io/wvyhkcp1wic/felix-guenthner/profile-img?ik-sdk-version=javascript-1.4.3&updatedAt=1643034256398"
-    alt="profile-image"
+    alt="Felix Günthner"
     @load="onImgLoad"
     v-show="isLoaded"
     style="width: 160px; height: 160px"

@@ -2,19 +2,21 @@
   <div>
     <AppBar />
 
-    <section class="h-screen flex flex-col items-center justify-evenly p-5">
-      <ProfileImage />
-      <ProfileInfo />
-      <LinkTree />
-    </section>
+    <div class="bg-gradient-to-b from-slate-100 to-slate-300">
+      <section class="h-screen flex flex-col items-center justify-evenly p-5">
+        <ProfileImage />
+        <ProfileInfo />
+        <LinkTree />
+      </section>
 
-    <section ref="projects" class="py-20 px-8 bg-slate-400">
-      <Projects />
-    </section>
+      <section ref="projects" class="h-screen py-20 px-8">
+        <Projects />
+      </section>
 
-    <section ref="about" class="h-screen py-20">
-      <ContactForm />
-    </section>
+      <section ref="about" class="h-screen py-20 px-8">
+        <ContactForm />
+      </section>
+    </div>
   </div>
 </template>
 
@@ -33,32 +35,4 @@ const about = ref();
 // provide reactive values globally
 provide("projects", projects);
 provide("about", about);
-
-// const scrollPosition = computed(() => {
-//   document.addEventListener("scroll", (event) => {
-//     console.log(window.scrollY);
-//   });
-// });
-
-const jeweleryShop = [
-  {
-    mobile: new URL("../assets/jewelry-store/mobile/home.jpg", import.meta.url),
-    // desktop: new URL("./assets/home.png", import.meta.url),
-  },
-  {
-    mobile: new URL(
-      "../assets/jewelry-store/mobile/product.jpg",
-      import.meta.url
-    ),
-  },
-  {
-    mobile: new URL("../assets/jewelry-store/mobile/bag.jpg", import.meta.url),
-  },
-  {
-    mobile: new URL(
-      "../assets/jewelry-store/mobile/about.jpg",
-      import.meta.url
-    ),
-  },
-];
 </script>

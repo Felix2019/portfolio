@@ -4,7 +4,9 @@
   >
     <div class="flex flex-row items-center space-x-1">
       <span class="text-lg font-bold">Hey</span>
-      <Icon icon="mdi:hand-wave-outline" width="20" height="20" />
+      <span 
+      >&#128075</span>
+
     </div>
     <!-- <ShareButton /> -->
 
@@ -19,22 +21,20 @@
         <span class="text-lg font-bold">Projects</span>
       </button>
 
-      <button
+      <!-- <button
         @click="scrollToAbout"
         name="share-button"
         aria-label="share-button"
         class="flex flex-row space-x-2.5"
       >
-        <!-- <Icon icon="ic:sharp-workspace-premium" width="26" height="26" /> -->
         <span class="text-lg font-bold">Contact</span>
-      </button>
+      </button> -->
     </div>
   </header>
 </template>
 
 <script setup>
 import ShareButton from "./share-btn.vue";
-import { Icon } from "@iconify/vue";
 import { inject } from "vue";
 
 // inject reactive value
