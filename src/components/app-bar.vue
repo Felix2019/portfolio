@@ -21,14 +21,14 @@
         <span class="text-lg font-bold">Projects</span>
       </button>
 
-      <!-- <button
+      <button
         @click="scrollToAbout"
         name="share-button"
         aria-label="share-button"
         class="flex flex-row space-x-2.5"
       >
         <span class="text-lg font-bold">Contact</span>
-      </button> -->
+      </button>
     </div>
   </header>
 </template>
