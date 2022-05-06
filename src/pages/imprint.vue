@@ -1,7 +1,7 @@
 <template>
   <div>
     <header
-      class="sticky top-0 h-14 z-10 flex justify-center items-center shadow"
+      class="sticky top-0 h-14 z-10 flex justify-center items-center shadow bg-slate-100"
     >
       <a href="https://felixguenthner.com">
         <h1 class="text-lg font-bold">Felix Günthner</h1>
