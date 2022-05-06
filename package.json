@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "felixguenthner",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,10 +7,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "firebase": "^9.6.1",
-    "nodemailer": "^6.7.2",
+    "firebase": "^9.7.0",
+    "lottie-web": "^5.9.4",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@iconify/vue": "^3.1.2",

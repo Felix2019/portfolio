@@ -5,7 +5,7 @@
     </div>
 
     <p class="text-lg text-center">
-      Computer Science student // video producer // founder of turtlelab
+      Computer Science student // video producer
     </p>
   </div>
 </template>

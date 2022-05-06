@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-row justify-around">
+  <div class="w-full flex flex-row justify-evenly">
     <button
       @click="openLink(item.link)"
       name="link-button"
@@ -27,7 +27,7 @@ export default {
           icon: "mdi-github",
         },
         {
-          link: "https://www.instagram.com/_felixx_3/",
+          link: "https://www.instagram.com/felixx.dev/",
           icon: "mdi-instagram",
         },
         {
@@ -36,8 +36,9 @@ export default {
         },
         // {
         //   link: "https://turtlelab.web.app",
-        //   icon: "mdi-web",
+        //   icon: "mdi-youtube",
         // },
+        // add youtube, xing, tiktok?
       ],
     };
   },
