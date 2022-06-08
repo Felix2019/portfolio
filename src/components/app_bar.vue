@@ -9,7 +9,7 @@
 
     </div>
 
-    <div class="flex flex-row space-x-4">
+    <div class="flex flex-row space-x-6">
       <button
         @click="scrollToProjects"
         name="share-button"

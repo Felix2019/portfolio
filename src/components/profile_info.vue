@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center space-y-8">
-    <div class="px-6 py-4 bg-white shadow-md rounded-full">
-      <span class="text-3xl font-bold text-center">Felix Günthner</span>
+    <div class="px-6 py-4 bg-white shadow rounded-full">
+      <p class="text-3xl font-bold text-center">Felix Günthner</p>
     </div>
 
     <p class="text-lg text-center">

@@ -17,12 +17,12 @@
         <div
           v-for="(project, index) in projects"
           :key="index"
-          class="flex flex-col items-start col-span-12 overflow-hidden shadow rounded-xl md:col-span-6 lg:col-span-4"
+          class="flex flex-col items-start col-span-12 overflow-hidden shadow rounded-xl hover:scale-105 transition duration-300 ease-out md:col-span-6 lg:col-span-4"
         >
           <a :href="project.url" class="w-full">
             <!-- project image -->
             <img
-              class="block w-full transition duration-300 ease-out transform hover:scale-110 object-cover shadow max-h-56"
+              class="block w-full object-cover shadow max-h-56"
               :src="project.thumbnail"
             />
             <!-- project description -->
@@ -32,7 +32,7 @@
               <h2 class="text-base font-bold sm:text-lg md:text-xl">
                 {{ project.title }}
               </h2>
-              <p class="mt-2 mb-5 text-sm text-gray-500">
+              <p class="mt-1.5 mb-8 text-sm text-gray-500">
                 {{ project.description }}
               </p>
 
@@ -102,7 +102,20 @@ const projects = [
     thumbnail: new URL("../assets/thumbnails/one_for_all.png", import.meta.url),
     images: [new URL("../assets/thumbnails/one_for_all.png", import.meta.url)],
   },
+  {
+    id: "4",
+    title: "Shop Dashboard",
+    description:
+      "Dashboard for an e-commerce jewelry shop for creating, updating and deleting products and for an overview about all products, customers and orders.",
+    url: "https://github.com/Felix2019",
+    tags: ["Vue", "Vite", "Tailwind", "Firebase"],
+    thumbnail: new URL(
+      "../assets/thumbnails/shop_dashboard_banner.png",
+      import.meta.url
+    ),
+    images: [new URL("../assets/thumbnails/one_for_all.png", import.meta.url)],
+  },
 
-  // think together, speech recognition, corona daily, webnasa, shop dashboard, ulna, one for all. recipe finder
+  // think together, speech recognition, corona daily, webnasa, ulna, one for all. recipe finder
 ];
 </script>

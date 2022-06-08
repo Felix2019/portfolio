@@ -31,6 +31,10 @@ export default {
           icon: "mdi-instagram",
         },
         {
+          link: "https://www.youtube.com/channel/UCFYkuQhoBQjzn_vwhWay6bQ",
+          icon: "ant-design:youtube-filled",
+        },
+        {
           link: "https://www.linkedin.com/in/felix-günthner-706b4b208/",
           icon: "mdi-linkedin",
         },

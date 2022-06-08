@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white">
     <div
-      class="container flex flex-col items-center p-6 mx-auto md:flex-row md:justify-between md:items-center"
+      class="flex flex-col items-center p-6 mx-auto md:flex-row md:justify-between md:items-center"
     >
       <p class="text-sm text-gray-500">© 2022 Felix Günthner</p>
 

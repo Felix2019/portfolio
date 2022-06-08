@@ -18,7 +18,7 @@
     <!-- contact button -->
     <button
       type="submit"
-      class="w-full space-x-2.5 px-5 py-3 bg-blue-600 hover:bg-blue-800 rounded-lg"
+      class="w-full space-x-2.5 px-5 py-3 bg-blue-600 hover:bg-blue-800 rounded-lg md:w-1/3"
     >
       <a
         href="
