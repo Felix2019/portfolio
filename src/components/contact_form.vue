@@ -16,19 +16,13 @@
     </div>
 
     <!-- contact button -->
-    <button
-      type="submit"
-      class="w-full space-x-2.5 px-5 py-3 bg-blue-600 hover:bg-blue-800 rounded-lg md:w-1/3"
+    <a
+      class="w-full flex justify-center items-center space-x-2.5 px-5 py-3 bg-blue-600 hover:bg-blue-800 rounded-lg md:w-1/3"
+      href="
+      mailto:turtlelab.developer@gmail.com?subject=Let's work together"
     >
-      <a
-        href="
-          mailto:turtlelab.developer@gmail.com?subject=Let's work together
-
-        "
-      >
-        <span class="text-white font-medium text-lg">Contact me</span>
-      </a>
-    </button>
+      <p class="text-white font-medium text-lg">Contact me</p>
+    </a>
   </div>
 </template>
 
