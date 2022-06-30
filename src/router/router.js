@@ -16,6 +16,11 @@ const routes = [
     name: "Imprint",
     component: () => import("../pages/imprint.vue"),
   },
+  {
+    path: "/callback",
+    name: "Callback",
+    component: () => import("../pages/callback_page.vue"),
+  },
 ];
 
 const router = createRouter({
