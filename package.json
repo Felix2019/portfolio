@@ -6,6 +6,7 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "type": "module",
   "dependencies": {
     "firebase": "^9.7.0",
     "lottie-web": "^5.9.4",
@@ -13,7 +14,7 @@
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@iconify/vue": "^3.1.2",
+    "@iconify/vue": "^3.2.1",
     "@vitejs/plugin-vue": "^2.0.0",
     "autoprefixer": "^10.4.1",
     "postcss": "^8.4.5",

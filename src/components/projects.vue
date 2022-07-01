@@ -19,7 +19,12 @@
           :key="index"
           class="flex flex-col items-start col-span-12 overflow-hidden shadow rounded-xl hover:scale-105 transition duration-300 ease-out md:col-span-6 lg:col-span-4"
         >
-          <a :href="project.url" class="w-full">
+          <a
+            :href="project.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full"
+          >
             <!-- project image -->
             <img
               class="block w-full object-cover shadow max-h-56"

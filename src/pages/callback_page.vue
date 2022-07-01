@@ -30,19 +30,23 @@ onMounted(async () => {
 const getAccessToken = async (code, state) => {
   try {
     const response = await fetch(
-      `${server}/spotifyCallback?code=${code}&state=${state}`
+      `${server}/spotify/callback?code=${code}&state=${state}`,
+      {
+        credentials: "include",
+      }
     );
 
-    if (response.status != 200) {
-      const e = await response.text();
-      throw e;
-    }
+    if (response.status != 200) throw await response.json();
 
-    router.push("/");
+    const result = await response.json();
+
+    // compare local vs session storage
+    localStorage.setItem("expireTime", result.expireTime);
   } catch (e) {
     console.log("callback page err", e);
+    throw e;
+  } finally {
     router.push("/");
-    throw Error(e);
   }
 };
 </script>

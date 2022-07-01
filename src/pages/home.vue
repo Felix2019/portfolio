@@ -13,7 +13,11 @@
         <Projects />
       </section>
 
-      <section ref="about" class="h-screen">
+      <section ref="stats" class="h-screen">
+        <CurrentSong />
+      </section>
+
+      <section ref="contact" class="h-screen">
         <ContactForm />
       </section>
     </div>
@@ -31,11 +35,14 @@ import AppBar from "../components/app_bar.vue";
 import Projects from "../components/projects.vue";
 import ContactForm from "../components/contact_form.vue";
 import Footer from "../components/footer.vue";
+import CurrentSong from "../components/current_song.vue";
 
 const projects = ref();
-const about = ref();
+const contact = ref();
+const stats = ref();
 
 // provide reactive values globally
 provide("projects", projects);
-provide("about", about);
+provide("stats", stats);
+provide("contact", contact);
 </script>
