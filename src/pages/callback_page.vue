@@ -10,43 +10,18 @@
 import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-const props = defineProps({
-  width: String,
-  height: String,
-});
+import { SpotifyController } from "../controller/spotify_controller";
+
+const spotifyController = new SpotifyController();
 
 const route = useRoute();
 const router = useRouter();
-const server = "http://localhost:4000";
 
 onMounted(async () => {
-  console.log("mounted callback page");
+  const { code, state } = route.query;
 
-  let { code, state } = route.query;
+  await spotifyController.getAccessToken(code, state);
 
-  await getAccessToken(code, state);
+  router.push("/");
 });
-
-const getAccessToken = async (code, state) => {
-  try {
-    const response = await fetch(
-      `${server}/spotify/callback?code=${code}&state=${state}`,
-      {
-        credentials: "include",
-      }
-    );
-
-    if (response.status != 200) throw await response.json();
-
-    const result = await response.json();
-
-    // compare local vs session storage
-    localStorage.setItem("expireTime", result.expireTime);
-  } catch (e) {
-    console.log("callback page err", e);
-    throw e;
-  } finally {
-    router.push("/");
-  }
-};
 </script>

@@ -6,7 +6,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "type": "module",
   "dependencies": {
     "firebase": "^9.7.0",
     "lottie-web": "^5.9.4",

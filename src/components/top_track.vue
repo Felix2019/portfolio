@@ -1,41 +1,44 @@
 <template>
-  <div class="h-full flex items-center justify-center">
+  <div class="h-full flex flex-col items-start justify-center space-y-8">
+    <!-- header -->
+    <span class="flex flex-row items-center space-x-4">
+      <img
+        class="h-12 w-12"
+        src="../assets/spotify_icon_black.png"
+        alt="spotify-icon"
+      />
+      <h2 class="font-bold text-3xl">Top Tracks</h2>
+    </span>
+
     <Loader v-if="isLoading" />
     <div v-else-if="error" class="p-6 bg-red-400">{{ error }}</div>
-    <!-- container -->
+    <!-- track container -->
     <div
       v-else
+      v-for="(song, index) in topTracks"
+      :key="index"
       class="w-full flex flex-col items-start p-6 space-y-6 bg-stone-800 rounded-md"
     >
-      <!-- header -->
-      <span class="flex flex-row items-center space-x-4">
-        <img
-          class="h-10 w-10"
-          src="../assets/spotify_icon.png"
-          alt="spotify-icon"
-        />
-        <h2 class="text-white font-bold text-xl">Current Song</h2>
-      </span>
-
+      <h1 class="text-white text-4xl">{{ index + 1 }}.</h1>
       <!-- information -->
       <div class="w-full flex flex-row items-start justify-between">
         <div class="flex flex-row space-x-5">
           <img
             class="h-20 w-20 rounded-md"
-            :src="currentSong.albumImageUrl"
+            :src="song.imageUrl"
             alt="spotify-icon"
           />
 
           <span class="space-y-1 break-words">
             <h1 class="text-white font-bold text-lg">
-              {{ currentSong.title }}
+              {{ song.title }}
             </h1>
-            <h2 class="text-white text-sm">{{ currentSong.artist }}</h2>
+            <h2 class="text-white text-sm">{{ song.artist }}</h2>
           </span>
         </div>
 
         <!-- open song btn -->
-        <button @click="openInNewTab(currentSong.songUrl)">
+        <button @click="openInNewTab(song.url)">
           <Icon
             icon="akar-icons:link-chain"
             width="26"
@@ -51,6 +54,7 @@
 import { onMounted, ref } from "vue";
 import { Icon } from "@iconify/vue";
 import Loader from "./loader.vue";
+import { SpotifyController } from "../controller/spotify_controller";
 
 export default {
   components: {
@@ -58,52 +62,28 @@ export default {
     Loader,
   },
   setup() {
-    const currentSong = ref(null);
+    const topTracks = ref(null);
     const isLoading = ref(true);
     const error = ref(null);
 
+    const spotifyController = new SpotifyController();
+
     onMounted(async () => {
-      currentSong.value = await fetchTopTracks().catch((e) => {
-        error.value = e;
-      });
-     
-      isLoading.value = false;
-    });
-
-   
-
-    const checkToken = async () => {
-      let item = JSON.parse(localStorage.getItem("accessToken"));
-
-      console.log(JSON.parse(item));
-    };
-
-    const fetchTopTracks = async () => {
-      const serverUrl = "http://localhost:4000";
-
       try {
-        const response = await fetch(`${serverUrl}/spotify/topTracks`, {
-          credentials: "include",
-        });
-
-        if (response.status != 200) throw await response.json();
-
-        const result = await response.json();
-
-        console.log(result);
-        return result;
+        topTracks.value = await spotifyController.getTopTracks();
       } catch (e) {
-        console.log(e.error);
-        throw e;
+        error.value = e;
+      } finally {
+        isLoading.value = false;
       }
-    };
+    });
 
     const openInNewTab = (url) => {
       window.open(url, "_blank").focus();
     };
 
     return {
-      currentSong,
+      topTracks,
       isLoading,
       error,
       openInNewTab,

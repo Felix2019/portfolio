@@ -51,51 +51,30 @@
 import { onMounted, ref } from "vue";
 import { Icon } from "@iconify/vue";
 import Loader from "./loader.vue";
+import { SpotifyController } from "../controller/spotify_controller";
 
 export default {
   components: {
     Icon,
     Loader,
   },
+
   setup() {
     const currentSong = ref(null);
     const isLoading = ref(true);
     const error = ref(null);
 
+    const spotifyController = new SpotifyController();
+
     onMounted(async () => {
-      currentSong.value = await fetchCurrentSong().catch((e) => {
-        error.value = e;
-      });
-      isLoading.value = false;
-    });
-
-    const fetchCurrentSong = async () => {
-      const serverUrl = "http://localhost:4000";
-
       try {
-        const response = await fetch(`${serverUrl}/spotify/currentSong`, {
-          credentials: "include",
-        });
-
-        if (response.status != 200) throw await response.json();
-
-        const result = await response.json();
-
-        console.log(result);
-        return result;
+        currentSong.value = await spotifyController.getCurrentTrack();
       } catch (e) {
-        console.log(e.error);
-        throw e;
+        error.value = e;
+      } finally {
+        isLoading.value = false;
       }
-    };
-
-    const checkToken = async () => {
-      let item = JSON.parse(localStorage.getItem("accessToken"));
-
-      console.log(JSON.parse(item));
-    };
-
-   
+    });
 
     const openInNewTab = (url) => {
       window.open(url, "_blank").focus();

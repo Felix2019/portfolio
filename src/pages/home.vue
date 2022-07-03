@@ -13,8 +13,11 @@
         <Projects />
       </section>
 
-      <section ref="stats" class="h-screen">
-        <CurrentSong />
+      <div class="h-20"></div>
+
+      <section ref="stats">
+        <!-- <CurrentSong /> -->
+        <TopTrack />
       </section>
 
       <section ref="contact" class="h-screen">
@@ -36,6 +39,7 @@ import Projects from "../components/projects.vue";
 import ContactForm from "../components/contact_form.vue";
 import Footer from "../components/footer.vue";
 import CurrentSong from "../components/current_song.vue";
+import TopTrack from "../components/top_track.vue";
 
 const projects = ref();
 const contact = ref();
