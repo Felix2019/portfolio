@@ -1,17 +1,23 @@
 <template>
-  <div class="h-full flex flex-col items-start justify-center space-y-8">
+  <div class="space-y-8">
     <!-- header -->
-    <span class="flex flex-row items-center space-x-4">
-      <img
-        class="h-12 w-12"
-        src="../assets/spotify_icon_black.png"
-        alt="spotify-icon"
-      />
-      <h2 class="font-bold text-3xl">Top Tracks</h2>
-    </span>
+    <div class="space-y-5">
+      <span class="flex flex-row items-center space-x-6">
+        <img
+          class="h-12 w-12"
+          src="../assets/spotify_icon_black.png"
+          alt="spotify-icon"
+        />
+        <h2 class="font-bold text-3xl text-gray-900">Top Tracks</h2>
+      </span>
+      <p class="font-medium text-gray-500">
+        Here's my top tracks on Spotify updated daily.
+      </p>
+    </div>
 
     <Loader v-if="isLoading" />
     <div v-else-if="error" class="p-6 bg-red-400">{{ error }}</div>
+
     <!-- track container -->
     <div
       v-else
@@ -19,12 +25,12 @@
       :key="index"
       class="w-full flex flex-col items-start p-6 space-y-6 bg-stone-800 rounded-md"
     >
-      <h1 class="text-white text-4xl">{{ index + 1 }}.</h1>
+      <h1 class="text-white text-3xl">{{ index + 1 }}.</h1>
       <!-- information -->
       <div class="w-full flex flex-row items-start justify-between">
         <div class="flex flex-row space-x-5">
           <img
-            class="h-20 w-20 rounded-md"
+            class="h-24 w-24 rounded-md"
             :src="song.imageUrl"
             alt="spotify-icon"
           />
@@ -55,6 +61,7 @@ import { onMounted, ref } from "vue";
 import { Icon } from "@iconify/vue";
 import Loader from "./loader.vue";
 import { SpotifyController } from "../controller/spotify_controller";
+import { async } from "@firebase/util";
 
 export default {
   components: {
@@ -62,20 +69,21 @@ export default {
     Loader,
   },
   setup() {
-    const topTracks = ref(null);
+    const topTracks = ref([]);
     const isLoading = ref(true);
     const error = ref(null);
 
     const spotifyController = new SpotifyController();
 
     onMounted(async () => {
-      try {
-        topTracks.value = await spotifyController.getTopTracks();
-      } catch (e) {
-        error.value = e;
-      } finally {
-        isLoading.value = false;
-      }
+      topTracks.value = await spotifyController
+        .getTopTracks()
+        .catch((e) => {
+          error.value = e;
+        })
+        .finally(() => {
+          isLoading.value = false;
+        });
     });
 
     const openInNewTab = (url) => {
