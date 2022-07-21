@@ -10,7 +10,7 @@
     ></div> -->
     <div id="profileImage" class="shadow">
       <img
-        src="../assets/profile_image.jpeg"
+        src="../assets/images/profile_image.jpeg"
         alt="Felix Günthner"
         @load="onImgLoad"
         v-show="isLoaded"

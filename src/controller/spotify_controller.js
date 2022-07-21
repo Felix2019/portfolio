@@ -6,11 +6,10 @@ const serverUrl = import.meta.env.VITE_PROD_SERVER_URL;
 const spotifyRepository = new SpotifyRepository();
 
 class SpotifyController {
+  // ! move to spotify repository
   loginSpotify = async () => {
     try {
       const response = await fetch(serverUrl + "/spotify/login");
-
-      if (response.status != 200) throw await response.json();
 
       const redirectUrl = await response.json();
 
@@ -20,6 +19,7 @@ class SpotifyController {
     }
   };
 
+  // ! move to spotify repository
   getAccessToken = async (code, state) => {
     try {
       const response = await fetch(
@@ -29,7 +29,7 @@ class SpotifyController {
         }
       );
 
-      if (response.status != 200) throw await response.json();
+      // if (response.status != 200) throw await response.json();
 
       const result = await response.json();
 

@@ -1,14 +1,12 @@
 <template>
   <div>
-    <header
-      class="sticky top-0 h-14 z-10 flex justify-center items-center shadow bg-slate-100"
-    >
+    <header class="sticky top-0 h-14 z-10 flex justify-center items-center shadow bg-slate-100">
       <a href="https://felixguenthner.com">
         <h1 class="text-lg font-bold">Felix Günthner</h1>
       </a>
     </header>
 
-    <div class="p-4 space-y-5">
+    <div class=" min-h-screen p-4 space-y-5">
       <h1 class="font-bold text-lg">Imprint</h1>
 
       <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
@@ -37,12 +35,8 @@
       <p>
         Die Europ&auml;ische Kommission stellt eine Plattform zur
         Online-Streitbeilegung (OS) bereit:
-        <a
-          href="https://ec.europa.eu/consumers/odr/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >https://ec.europa.eu/consumers/odr/</a
-        >.<br />
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank"
+          rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br />
         Unsere E-Mail-Adresse finden Sie oben im Impressum.
       </p>
 

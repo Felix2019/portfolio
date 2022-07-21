@@ -68,15 +68,9 @@ const projects = [
     url: "https://goldschmiede-ruthguenthner.com",
     tags: ["Vue", "Vite", "Firebase", "Tailwind", "Stripe", "Vuex"],
     thumbnail: new URL(
-      "../assets/thumbnails/ruth_guenthner_schmuck.png",
+      "../assets/images/project_thumbnails/ruth_guenthner_schmuck.png",
       import.meta.url
     ),
-    images: [
-      new URL(
-        "../assets/thumbnails/ruth_guenthner_schmuck.png",
-        import.meta.url
-      ),
-    ],
   },
   {
     id: "2",
@@ -94,8 +88,10 @@ const projects = [
       "Digital Ocean",
     ],
 
-    thumbnail: new URL("../assets/thumbnails/interview.png", import.meta.url),
-    images: [new URL("../assets/thumbnails/interview.png", import.meta.url)],
+    thumbnail: new URL(
+      "../assets/images/project_thumbnails/interview.png",
+      import.meta.url
+    ),
   },
   {
     id: "3",
@@ -104,8 +100,10 @@ const projects = [
       "Web App which displays all available rental vehicles provider close to you.",
     url: "https://one-for-all-b8cd4.web.app",
     tags: ["Vue", "Webpack", "Vuetify", "PWA", "Firebase"],
-    thumbnail: new URL("../assets/thumbnails/one_for_all.png", import.meta.url),
-    images: [new URL("../assets/thumbnails/one_for_all.png", import.meta.url)],
+    thumbnail: new URL(
+      "../assets/images/project_thumbnails/one_for_all.png",
+      import.meta.url
+    ),
   },
   {
     id: "4",
@@ -115,10 +113,9 @@ const projects = [
     url: "https://github.com/Felix2019",
     tags: ["Vue", "Vite", "Tailwind", "Firebase"],
     thumbnail: new URL(
-      "../assets/thumbnails/shop_dashboard_banner.png",
+      "../assets/images/project_thumbnails/shop_dashboard_banner.png",
       import.meta.url
     ),
-    images: [new URL("../assets/thumbnails/one_for_all.png", import.meta.url)],
   },
 
   // think together, speech recognition, corona daily, webnasa, ulna, one for all. recipe finder

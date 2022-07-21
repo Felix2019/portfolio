@@ -5,7 +5,7 @@
       <span class="flex flex-row items-center space-x-6">
         <img
           class="h-12 w-12"
-          src="../assets/spotify_icon_black.png"
+          src="../assets/images/spotify_icon_black.png"
           alt="spotify-icon"
         />
         <h2 class="font-bold text-3xl text-gray-900">Top Tracks</h2>
@@ -61,7 +61,6 @@ import { onMounted, ref } from "vue";
 import { Icon } from "@iconify/vue";
 import Loader from "./loader.vue";
 import { SpotifyController } from "../controller/spotify_controller";
-import { async } from "@firebase/util";
 
 export default {
   components: {

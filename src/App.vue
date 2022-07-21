@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { analytics } from "./firebase-config";
+import { analytics } from "./firebase_config";
 </script>
 
 <style>
@@ -19,5 +19,9 @@ import { analytics } from "./firebase-config";
 
 html {
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 </style>

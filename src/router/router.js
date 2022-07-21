@@ -4,17 +4,17 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("../pages/home.vue"),
+    component: () => import("../pages/home_page.vue"),
   },
   {
     path: "/privacy-policy",
     name: "Privacy Policy",
-    component: () => import("../pages/privacy_policy.vue"),
+    component: () => import("../pages/privacy_policy_page.vue"),
   },
   {
     path: "/imprint",
     name: "Imprint",
-    component: () => import("../pages/imprint.vue"),
+    component: () => import("../pages/imprint_page.vue"),
   },
   {
     path: "/callback",

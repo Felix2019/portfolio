@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full flex flex-row justify-evenly">
+  <div
+    class="w-full whitespace-nowrap flex bg-white px-6 py-4 space-x-10 shadow rounded-xl overflow-x-scroll md:justify-center lg:bg-transparent lg:shadow-none lg:space-x-14"
+  >
     <button
       @click="openLink(item.link)"
       name="link-button"
@@ -38,11 +40,11 @@ export default {
           link: "https://www.linkedin.com/in/felix-günthner-706b4b208/",
           icon: "mdi-linkedin",
         },
-        // {
-        //   link: "https://turtlelab.web.app",
-        //   icon: "mdi-youtube",
-        // },
-        // add youtube, xing, tiktok?
+        {
+          link: "https://felixguenthner.com/assets/cv_felix_guenthner.2a7e2cff.pdf",
+          icon: "academicons:cv",
+        },
+        // add xing, tiktok?
       ],
     };
   },

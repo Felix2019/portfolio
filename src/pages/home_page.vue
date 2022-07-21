@@ -7,6 +7,13 @@
         <ProfileImage />
         <ProfileInfo />
         <LinkTree />
+
+        <img
+          src="../assets/pdf/cv_felix_guenthner.pdf"
+          alt=""
+          width="20"
+          height="20"
+        />
       </section>
 
       <section ref="projects">
@@ -16,7 +23,6 @@
       <div class="h-20"></div>
 
       <section ref="stats">
-        <!-- <CurrentSong /> -->
         <TopTrack />
       </section>
 
@@ -34,11 +40,10 @@ import { ref, provide } from "vue";
 import ProfileImage from "../components/profile_image.vue";
 import ProfileInfo from "../components/profile_info.vue";
 import LinkTree from "../components/link_tree.vue";
-import AppBar from "../components/app_bar.vue";
+import AppBar from "../components/layout/app_bar.vue";
 import Projects from "../components/projects.vue";
 import ContactForm from "../components/contact_form.vue";
-import Footer from "../components/footer.vue";
-import CurrentSong from "../components/current_song.vue";
+import Footer from "../components/layout/footer.vue";
 import TopTrack from "../components/top_track.vue";
 
 const projects = ref();
