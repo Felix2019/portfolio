@@ -7,13 +7,6 @@
         <ProfileImage />
         <ProfileInfo />
         <LinkTree />
-
-        <img
-          src="../assets/pdf/cv_felix_guenthner.pdf"
-          alt=""
-          width="20"
-          height="20"
-        />
       </section>
 
       <section ref="projects">
